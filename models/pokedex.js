@@ -1,5 +1,5 @@
 const Poke = require("./poke")
-const mongoose = require("./pokemon")
+const mongoose = require("./connection")
 const pokes = require("./pokeData")
 
 async function pokedex(){

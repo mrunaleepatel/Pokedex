@@ -1,44 +1,26 @@
 const Router = require("express").Router
+const Controller = require("../controllers/pokemon")
 const router = Router()
 
-// INDEX 
-app.get('/pokemon', (req, res) => {
-    // render a list of images for all Pokémon
-    res.render('index', { pokemonList: Pokemon });
-  });
+// index
+router.get("/", controller.index)
 
+// new
+router.get("/new", controller.new)
 
-// SHOW
-app.get('/:id', (req, res) => {
-res.render('show.ejs', { data: Pokemon[req.params.id] });
-});
+// destory
+router.delete("/:id", controller.destroy)
 
-// NEW 
-app.get('/pokemon/new', (req, res) => {
-    res.send('Form for creating a new Pokémon');
-  });
+// update
+router.put("/:id", controller.update)
 
-// EDIT
-app.get('/pokemon/:id/edit', (req, res) => {
-    const pokemonId = req.params.id;
-    res.send(`Form for editing Pokémon with ID ${pokemonId}`);
-});
+// create
+router.post("/", controller.create)
 
-// CREATE 
-app.post('/pokemon', (req, res) => {
-    res.send('Create a new Pokémon');
-});
+// edit
+router.get("/:id/edit", controller.edit)
 
-// UPDATE 
-app.put('/pokemon/:id', (req, res) => {
-    const pokemonId = req.params.id;
-    res.send(`Update Pokémon with ID ${pokemonId}`);
-});
-
-// DESTROY 
-app.delete('/pokemon/:id', (req, res) => {
-    const pokemonId = req.params.id;
-    res.send(`Delete Pokémon with ID ${pokemonId}`);
-});
+// show
+router.get("/:id", controller.show)
 
 module.exports = router

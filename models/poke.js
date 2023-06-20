@@ -1,4 +1,4 @@
-const mongoose = require("./pokemon")
+const mongoose = require("./connection")
 const {Schema, model} = mongoose
 const pokeSchema = new Schema({
     name: String,
