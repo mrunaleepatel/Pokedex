@@ -4,30 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="../../public/style.css">
 </head>
 <body>
 
- <h1> Create a New Cartoon</h1>
-<form action="/pokemon" method="post">
-    <label for="name">Pokemon Name:</label>
-    <input type="text" name="name" placeholder="Name of Pokemon"/>
-  
-    <label for="type">Pokemon Types:</label>
-    <input type="text" name="type" placeholder="Enter Pokemon Types"/>
-  
-    <label for="hp">HP:</label>
-    <input type="number" name="hp" placeholder="Enter hp"/>
-  
-    <label for="attack">Attack:</label>
-    <input type="number" name="attack" placeholder="Enter Attack"/>
-  
-    <label for="defense">Defense:</label>
-    <input type="number" name="defense" placeholder="Enter Defense"/>
-  
-    <input class="submitButton" type="submit" value="Add Pokemon"/>
+    <a href="/pokemon/new"><button>Create New Pokemon</button></a>
+    <h1>List of Pokemons</h1>
+    <ul>
+        <% pokemons.forEach((pokemon, index) => { %>
 
-</form>
+            <li>
+                <a href="/pokemon/<%= pokemon._id %>"><h2><%= pokemon.name %></h2></a>
+                <br><img src= "<%= pokemon.img %>">
+            </li>
+
+        <% }) %>
+    </ul>
     
 </body>
 </html>

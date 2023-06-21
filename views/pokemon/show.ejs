@@ -4,26 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="../../public/style.css">
 </head>
 <body>
-    <h1 class="pokemon"><%= pokemon.name %></h1>
+    <h1>Pokedex<br><%= pokemon.name %></h1>
 <div class="container">
-    <img src="<%= pokemon.image %>" alt="Pokemon Image">
+    <a href="/pokemon/new"><button>Add Pokemon</button></a>
+        <a href="/pokemon"><button>Go Back To Main Page</button></a>
+        <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit <%= pokemon.name %></button></a>
 </div>
-    <h1 class="pokemonTypes"><%= pokemon.type %></h1>
-<div>
-    <h1>Stats:</h1>
-    <ul>
-        <li>HP: <%= pokemon.stats.hp %></li>
-        <li>Attack: <%= pokemon.stats.attack %></li>
-        <li>Defense: <%= pokemon.stats.defense %><li>
-    </ul>
-</div>
-    <a href="/pokemon"><button>Go Back to Main</button></a>
-    <a href="/pokemon/<%= pokemon._id %>/edit"><button>EDIT</button></a>
+<a href="/pokemon <%= pokemon._id %>">
+<h2><%= pokemon.name &></h2></a>
+<div class="pokemonImg"><img src="<%= pokemon.img %>" alt="Pokemon Image"></div>
+<ul>
+    <li>
+        <h1 class="pokemonTypes"><%= pokemon.type %></h1>
     <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
         <input type="submit" value="DELETE">
     </form>
+    </li>
+<li>
+    <h1>Stats:</h1>
+        <p>HP: <%= pokemon.stats.hp %></p>
+        <p>Attack: <%= pokemon.stats.attack %></p>
+        <p>Defense: <%= pokemon.stats.defense %></p>
+        <p>spAttack: <%= pokemon.stats.spattack %></p>
+        <p>spDefense <%= pokemon.stats.spdefense %></p>
+        <p>Speed: <%= pokemon.stats.speed %></p>
+</li>
+<li>
+    <h1>Damages</h1>
+        <p>Normal: <%= pokemon.damages.normal %></p>
+        <p>Fire: <%= pokemon.damages.fire %></p>
+        <p>Water: <%= pokemon.damages.water %></p>
+        <p>Electric: <%= pokemon.damages.electric %></p>
+        <p>Grass: <%= pokemon.damages.grass %></p>
+        <p>Ice: <%= pokemon.damages.ice %></p>
+        <p>Fight: <%= pokemon.damages.fight %></p>
+        <p>Poison: <%= pokemon.damages.poison %></p>
+        <p>Ground: <%= pokemon.damages.ground %></p>
+        <p>Flying: <%= pokemon.damages.flying %></p>
+        <p>Psychic: <%= pokemon.damages.psychic %></p>
+        <p>Bug: <%= pokemon.damages.bug %></p>
+        <p>Rock: <%= pokemon.damages.rock %></p>
+        <p>Ghost: <%= pokemon.damages.ghost %></p>
+        <p>Dragon: <%= pokemon.damages.dragon %></p>
+        <p>Dark: <%= pokemon.damages.dark %></p>
+        <p>Steel: <%= pokemon.damages.steel %></p>
+</li>
+</ul>
+   
 </body>
 </html>
