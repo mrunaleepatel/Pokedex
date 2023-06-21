@@ -1,9 +1,9 @@
-const Pokedex = require("../../models/pokemon")
+const Pokemon = require("../../models/pokemon")
 
 async function destroy(req, res){
     const id = req.params.id
-    await Pokedex.findByIdAndRemove(id)
-    res.redirect("/pokedex")
+    await Pokemon.findByIdAndRemove(id)
+    res.redirect("/pokemon")
 }
 
 module.exports = destroy

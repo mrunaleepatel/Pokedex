@@ -1,4 +1,4 @@
-const Pokemon = require("../../models/connection")
+const Pokemon = require("../../models/pokemon")
 
 async function index(req, res){
     const pokemons = await Pokemon.find({})

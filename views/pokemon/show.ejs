@@ -7,14 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1><%= pokemon.name %></h1>
-    <h2>Year: <%= pokemon.yearCreated %></h2>
+    <h1 class="pokemon"><%= pokemon.name %></h1>
+<div class="container">
+    <img src="<%= pokemon.image %>" alt="Pokemon Image">
+</div>
+    <h1 class="pokemonTypes"><%= pokemon.type %></h1>
+<div>
+    <h1>Stats:</h1>
+    <ul>
+        <li>HP: <%= pokemon.stats.hp %></li>
+        <li>Attack: <%= pokemon.stats.attack %></li>
+        <li>Defense: <%= pokemon.stats.defense %><li>
+    </ul>
+</div>
     <a href="/pokemon"><button>Go Back to Main</button></a>
-    <a href="/cartoon/<%= pokemon._id %>/edit"><button>EDIT</button></a>
+    <a href="/pokemon/<%= pokemon._id %>/edit"><button>EDIT</button></a>
     <form action="/pokemon/<%= pokemon._id %>?_method=delete" method="post">
         <input type="submit" value="DELETE">
     </form>
-    
 </body>
 </html>

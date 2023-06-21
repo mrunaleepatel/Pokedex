@@ -8,17 +8,26 @@
 </head>
 <body>
 
-    <a href="/pokemon/new"><button>Create New Pokemon</button></a>
-    <h1>List of Pokemons</h1>
-    <ul>
-        <% pokemons.forEach((pokemon, index) => { %>
+ <h1> Create a New Cartoon</h1>
+<form action="/pokemon" method="post">
+    <label for="name">Pokemon Name:</label>
+    <input type="text" name="name" placeholder="Name of Pokemon"/>
+  
+    <label for="type">Pokemon Types:</label>
+    <input type="text" name="type" placeholder="Enter Pokemon Types"/>
+  
+    <label for="hp">HP:</label>
+    <input type="number" name="hp" placeholder="Enter hp"/>
+  
+    <label for="attack">Attack:</label>
+    <input type="number" name="attack" placeholder="Enter Attack"/>
+  
+    <label for="defense">Defense:</label>
+    <input type="number" name="defense" placeholder="Enter Defense"/>
+  
+    <input class="submitButton" type="submit" value="Add Pokemon"/>
 
-            <li>
-                <a href="/pokemon/<%= pokemon._id %>"><h2><%= pokemon.name %></h2></a>
-            </li>
-
-        <% }) %>
-    </ul>
+</form>
     
 </body>
 </html>

@@ -1,8 +1,8 @@
-const Pokedex = require("../../models/pokemon")
+const Pokemon = require("../../models/pokemon")
 
 async function create(req, res){
-    const pokedex = await Pokedex.create(req.body)
-    res.redirect("/pokedex")
+    const pokemon = await Pokemon.create(req.body)
+    res.redirect("/pokemon")
 }
 
 module.exports = create
