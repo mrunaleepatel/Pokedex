@@ -1,4 +1,4 @@
-const Pokemon = require("../../models/pokedex")
+const Pokemon = require("../../models/pokemon")
 
 async function update(req, res){
     const id = req.params.id

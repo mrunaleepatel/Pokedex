@@ -1,8 +1,8 @@
 const Pokemon = require("../../models/connection")
 
 async function index(req, res){
-    const pokemon = await Poke.find({})
-    res.render("pokemon/index.ejs", {pokemon})
+    const pokemons = await Pokemon.find({})
+    res.render("pokemon/index.ejs", {pokemons})
 }
 
 module.exports = index

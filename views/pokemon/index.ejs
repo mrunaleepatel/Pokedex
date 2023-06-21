@@ -11,7 +11,7 @@
     <a href="/pokemon/new"><button>Create New Pokemon</button></a>
     <h1>List of Pokemons</h1>
     <ul>
-        <% pokemon.forEach((pokemon, index) => { %>
+        <% pokemons.forEach((pokemon, index) => { %>
 
             <li>
                 <a href="/pokemon/<%= pokemon._id %>"><h2><%= pokemon.name %></h2></a>

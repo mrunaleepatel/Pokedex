@@ -1,17 +1,12 @@
 const mongoose = require("./connection")
 const {Schema, model} = mongoose
-const pokeSchema = new Schema({
+
+const pokemonSchema = new Schema({
     name: String,
     img: String,
     type: Array,
     stats: Object
 })
-const Poke = model("Poke", pokeSchema)
-console.log(Poke)
+const Pokemon = model("Pokemon", pokemonSchema)
 
-
-
-
-
-
-module.exports = Poke
+module.exports = Pokemon
