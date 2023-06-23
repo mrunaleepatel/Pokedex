@@ -13,33 +13,41 @@
     <a href="/pokemon/new"><button>Add Pokemon</button></a>
         <a href="/pokemon"><button>Go Back To Main Page</button></a>
         <a href="/pokemon/<%=pokemon._id%>/edit"><button>Edit <%=pokemon.name%></button></a>
+        <form action="/pokemon/<%=pokemon._id%>?_method=delete" method="post">
+            <input type="submit" value="Delete <%=pokemon.name%>">
+        </form>
 </div>
 
 <div class="pokemonImg">
     <img src="<%=pokemon.img%>" alt="Pokemon Image">
 </div>
-<ul>
-    <li>
-       
-    <form action="/pokemon/<%=pokemon._id%>?_method=delete" method="post">
-        <input type="submit" value="DELETE">
-    </form>
-    </li>
-<li>
-    <h1>Stats:</h1>
-        <p>HP: <%=pokemon.stats.hp%></p>
-        <p>Attack: <%=pokemon.stats.attack%></p>
-        <p>Defense: <%=pokemon.stats.defense%></p>
-        <p>spAttack: <%=pokemon.stats.spattack%></p>
-        <p>spDefense <%=pokemon.stats.spdefense%></p>
-        <p>Speed: <%= pokemon.stats.speed%></p>
-</li>
-<li>
-    <h1>Misc</h1>
-        <p>Height: <%=pokemon.misc.height%></p>
-        <p>Weight: <%=pokemon.misc.weight%></p>
-</li>
-</ul>
+
+
+<div class="container-box">
+    <div class="left-box">
+        <div class="box">
+            <h3>Stats:</h3>
+            <ul>
+                <li>HP: <%=pokemon.stats.hp%></li>
+                <li>Attack: <%=pokemon.stats.attack%></li>
+                <li>Defense: <%=pokemon.stats.defense%></li>
+                <li>spAttack: <%=pokemon.stats.spattack%></li>
+                <li>spDefense: <%=pokemon.stats.spdefense%></li>
+                <li>Speed: <%= pokemon.stats.speed%></li>
+            </ul>
+        </div>
+    </div>    
+    
+    <div class="right-box">
+        <div class="box">
+            <h3>Misc:</h3>
+            <ul>
+                <li>Height: <%=pokemon.misc.height%></li>
+                <li>Weight: <%=pokemon.misc.weight%></li>
+            </ul>
+        </div>
+    </div>
+</div>
   
 </body>
 </html>
