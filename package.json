@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js",
-    "pokemon": "node models/pokemon.js"
+    "dev": "node --watch server.js"
   },
   "keywords": [],
   "author": "",

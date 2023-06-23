@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="stylesheet" href="../../public/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -17,6 +17,8 @@
     <label for="type">Pokemon Types:</label>
     <input type="text" name="type" placeholder="Enter Pokemon Types" value="<%= pokemon.type %>"/>
   
+    <input type="text" name="img" placeholder="Img url" value="<%= pokemon.img %>"/>
+
     <label for="hp">HP:</label>
     <input type="number" name="hp" placeholder="Enter HP" value="<%= pokemon.stats.hp %>"/>
   
@@ -27,7 +29,7 @@
     <input type="number" name="defense" placeholder="Enter Defense" value="<%= pokemon.stats.defense %>"/>
 
     <label for="spattack">Spattack:</label>
-    <input type="number" name="spattack" placeholder="Enter spAttack" value="<%= pokemon.stats.defense %>"/>
+    <input type="number" name="spattack" placeholder="Enter spAttack" value="<%= pokemon.stats.spattack %>"/>
 
     <label for="spdefense">Spdefense:</label>
     <input type="number" name="spdefense" placeholder="Enter spDefense" value="<%= pokemon.stats.spdefense %>"/>

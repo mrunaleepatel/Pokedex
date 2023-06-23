@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="stylesheet" href="../../public/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
     <a href="/pokemon/new"><button>Create New Pokemon</button></a>
     <h1>List of Pokemons</h1>
     <ul>
-        <% pokemons.forEach((pokemon, index) => { %>
+        <% pokemon.forEach((pokemon, index) => { %>
 
             <li>
-                <a href="/pokemon/<%= pokemon._id %>"><h2><%= pokemon.name %></h2></a>
-                <br><img src= "<%= pokemon.img %>">
+                <a href="/pokemon/<%=pokemon._id%>"><h2><%=pokemon.name%></h2></a>
+                <br><img src="<%=pokemon.img%>">
             </li>
 
         <% }) %>
