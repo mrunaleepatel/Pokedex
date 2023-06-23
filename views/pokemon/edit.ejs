@@ -10,13 +10,14 @@
 <body>
 
  <h1> Edit Pokemon</h1>
+ <div class="form-container">
  <form action="/pokemon/<%= pokemon._id %>?_method=put" method="post">
     <label for="name">Pokemon Name:</label>
     <input type="text" name="name" placeholder="Enter Pokemon Name" value="<%= pokemon.name %>"/>
   
     <label for="type">Pokemon Types:</label>
     <input type="text" name="type" placeholder="Enter Pokemon Types" value="<%= pokemon.type %>"/>
-  
+
     <input type="text" name="img" placeholder="Img url" value="<%= pokemon.img %>"/>
 
     <label for="hp">HP:</label>
@@ -36,9 +37,16 @@
 
     <label for="speed">Speed:</label>
     <input type="number" name="speed" placeholder="Enter Speed" value="<%= pokemon.stats.speed %>"/>
-  
+
+    <label for="height">Height:</label>
+    <input type="number" name="height" placeholder="Enter Height" value="<%= pokemon.misc.height %>"/>
+
+    <label for="weight">Weight:</label>
+    <input type="number" name="weight" placeholder="Enter Weight" value="<%= pokemon.misc.weight %>"/>
+
     <input type="submit" value="Add"/>
  </form>
     <a href="/pokemon"><button>Back to main page</main></button></a>
+</div>
 </body>
 </html>

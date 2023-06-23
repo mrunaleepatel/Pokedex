@@ -13,6 +13,10 @@ async function update(req, res){
             spattack: req.body.spattack,
             spdefense: req.body.spdefense,
             speed: req.body.speed
+        },
+        misc: {
+            height: req.body.height, 
+            weight: req.body.weight
         }
     }
     await Pokemon.findByIdAndUpdate(id, updatePokemon)

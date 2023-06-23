@@ -13,24 +13,9 @@ const pokemonSchema = new Schema({
       spdefense: Number,
       speed: Number
   },
-    damages: {
-          normal: String,
-          fire: String,
-          water: String,
-          electric: String,
-          grass: String,
-          ice: String,
-          fight: String,
-          poison: String,
-          ground: String,
-          flying: String,
-          psychic: String,
-          bug: String,
-          rock: String,
-          ghost: String,
-          dragon: String,
-          dark: String,
-          steel: String
+    misc: {
+          height: Number,
+          weight: Number,
         },
 });
 const Pokemon = model("pokemon", pokemonSchema)

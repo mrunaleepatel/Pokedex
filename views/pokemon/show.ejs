@@ -15,10 +15,12 @@
         <a href="/pokemon/<%=pokemon._id%>/edit"><button>Edit <%=pokemon.name%></button></a>
 </div>
 
-<div class="pokemonImg"><img src="<%=pokemon.img%>" alt="Pokemon Image"></div>
+<div class="pokemonImg">
+    <img src="<%=pokemon.img%>" alt="Pokemon Image">
+</div>
 <ul>
     <li>
-        
+       
     <form action="/pokemon/<%=pokemon._id%>?_method=delete" method="post">
         <input type="submit" value="DELETE">
     </form>
@@ -33,24 +35,9 @@
         <p>Speed: <%= pokemon.stats.speed%></p>
 </li>
 <li>
-    <h1>Damages</h1>
-        <p>Normal: <%=pokemon.damages.normal%></p>
-        <p>Fire: <%=pokemon.damages.fire%></p>
-        <p>Water: <%=pokemon.damages.water%></p>
-        <p>Electric: <%=pokemon.damages.electric%></p>
-        <p>Grass: <%=pokemon.damages.grass%></p>
-        <p>Ice: <%=pokemon.damages.ice%></p>
-        <p>Fight: <%=pokemon.damages.fight%></p>
-        <p>Poison: <%=pokemon.damages.poison%></p>
-        <p>Ground: <%=pokemon.damages.ground%></p>
-        <p>Flying: <%=pokemon.damages.flying%></p>
-        <p>Psychic: <%=pokemon.damages.psychic%></p>
-        <p>Bug: <%=pokemon.damages.bug%></p>
-        <p>Rock: <%=pokemon.damages.rock%></p>
-        <p>Ghost: <%=pokemon.damages.ghost%></p>
-        <p>Dragon: <%=pokemon.damages.dragon%></p>
-        <p>Dark: <%=pokemon.damages.dark%></p>
-        <p>Steel: <%=pokemon.damages.steel%></p>
+    <h1>Misc</h1>
+        <p>Height: <%=pokemon.misc.height%></p>
+        <p>Weight: <%=pokemon.misc.weight%></p>
 </li>
 </ul>
   

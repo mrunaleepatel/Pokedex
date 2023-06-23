@@ -1,5 +1,5 @@
 body {
-    background-color: darkseagreen;
+    background-color:lavender;
 }
 
 h1 {
@@ -7,6 +7,7 @@ h1 {
     text-align: center;
     color: crimson;
     font-size: 30px;
+    justify-content: center;
 }
 
 h2 {
@@ -25,14 +26,21 @@ ul {
 }
 
 li {
-    display: block;
-    flex-wrap: wrap;
+    display: flex;
     color: black;
-    margin: 10px auto;
 }
 
-img {
-    display: flex;
-    justify-content: center;
+
+.form-container label {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.form-container input {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
     margin: 0 auto;
 }
+
